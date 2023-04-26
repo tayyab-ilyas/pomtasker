@@ -8,7 +8,12 @@ import ToDos from './Components/ToDos'
 import AddToDo from './Components/AddToDo'
 import PomodoroTimer from './Components/Pomodoro'
 import Spotify from './Components/Spotify'
-
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 
 
 
@@ -62,14 +67,14 @@ else{
   return (
     <>
 
-      
+      <Router>
       <Navbar title="PomTasker." searchBar={false}/>
       <PomodoroTimer/>
       <AddToDo addTodo={addTodo}/>
       <ToDos todos={todos} onDelete={onDelete}/>
       <Spotify/>
       <Footer/>
-  
+      </Router>
       
     </>
   )
