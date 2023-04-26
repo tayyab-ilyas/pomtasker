@@ -3,9 +3,9 @@ import ToDoItem from '../Components/ToDoItem'
 
 export default function ToDos(props) {
   return (
-    <div className='container min-h-[70vh] m-10'>
-        <h3 className="text-2xl font-semibold mb-1 ">Todos List</h3>
-        {props.todos.length===0?"You're All Done!":
+    <div className='container  text-white font-mono  ml-[75%] mt-36 absolute'>
+        
+        {props.todos.length===0?"No Tasks Remaining, Good Job!":
         
         props.todos.map((todo)=>{
          return(
@@ -18,3 +18,4 @@ export default function ToDos(props) {
     </div>
   )
 }
+ 

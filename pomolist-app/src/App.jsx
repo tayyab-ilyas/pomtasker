@@ -6,6 +6,9 @@ import Navbar from './Components/Navbar'
 import Footer from './Components/Footer'
 import ToDos from './Components/ToDos'
 import AddToDo from './Components/AddToDo'
+import PomodoroTimer from './Components/Pomodoro'
+import Spotify from './Components/Spotify'
+
 
 
 
@@ -60,11 +63,13 @@ else{
     <>
 
       
-      <Navbar title="My ToDos List" searchBar={false}/>
+      <Navbar title="Pomolist." searchBar={false}/>
+      <PomodoroTimer/>
       <AddToDo addTodo={addTodo}/>
       <ToDos todos={todos} onDelete={onDelete}/>
+      <Spotify/>
       <Footer/>
-      
+  
       
     </>
   )

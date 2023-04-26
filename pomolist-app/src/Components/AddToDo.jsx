@@ -18,34 +18,33 @@ export default function AddToDo({addTodo}) {
         }
     }
   return (
-    <div className='container my-3'>
-        <h3 className="text-2xl font-semibold">Add a task</h3>
+    <div className='container bg-gray-700 rounded-3xl my-6 w-[25%] absolute h-52 mt-32 ml-24 p-6'>
+        
         <form onSubmit={submit} className="w-full max-w-sm">
   <div className="md:flex md:items-center mb-6">
     <div className="md:w-1/3">
-      <label htmlFor="title" className="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4">
-        Add a task
+      <label htmlFor="title" className="text-black  md:text-right mb-1 md:mb-0">
       </label>
     </div>
-    <div className="md:w-2/3">
-      <input id="title" type="text" value={title} onChange={(e)=>{setTitle(e.target.value)}} className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"   />
+    <div className="md:w-2/3 mr-20">
+      <input id="title" type="text" value={title} onChange={(e)=>{setTitle(e.target.value)}} className="bg-gray-200 appearance-none border-2 border-gray-200  w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white  placeholder:text-gray-500 rounded-lg font-mono text-sm"   placeholder='Task Title'/>
     </div>
   </div>
-  <div className="md:flex md:items-center mb-6">
+  <div className="md:flex md:items-center mb-6 ">
     <div className="md:w-1/3">
-      <label htmlFor="desc" className="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" >
-        Task Description
+      <label htmlFor="desc" className="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 " >
+       
       </label>
     </div>
-    <div className="md:w-2/3">
-      <input id="desc" type="text" value={desc} onChange={(e)=>{setDesc(e.target.value)}} className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" />
+    <div className="md:w-2/3 mr-20">
+      <input id="desc" type="text" value={desc} onChange={(e)=>{setDesc(e.target.value)}} className="bg-gray-200 appearance-none border-2 border-gray-200  w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white  placeholder:text-gray-500 rounded-lg font-mono text-sm" placeholder='Task Description' />
     </div>
   </div>
   
   <div className="md:flex md:items-center">
     <div className="md:w-1/3"></div>
-    <div className="md:w-2/3">
-      <button className="shadow bg-purple-500 hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded" type="submit">
+    <div className="md:w-2/3 mr-20">
+      <button className="shadow bg-pink-600 hover:bg-pink-800 text-sm  text-white font-mono p-2 rounded-xl" type="submit">
         Add Task
       </button>
     </div>
