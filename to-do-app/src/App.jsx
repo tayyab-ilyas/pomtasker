@@ -1,0 +1,73 @@
+import { useState, useEffect } from 'react'
+import reactLogo from './assets/react.svg'
+import viteLogo from '/vite.svg'
+import './index.css'
+import Navbar from './Components/Navbar'
+import Footer from './Components/Footer'
+import ToDos from './Components/ToDos'
+import AddToDo from './Components/AddToDo'
+
+
+
+function App() {
+  let initTodo;
+  if(localStorage.getItem("todos")===null){
+    initTodo =[];
+  }
+  else{
+    initTodo= JSON.parse(localStorage.getItem("todos"));
+  }
+  const onDelete = (todo)=>{
+    console.log("im on delete", todo);
+
+    setTodos(todos.filter((e)=>{
+      return e!==todo;
+    }));
+    localStorage.setItem("todos", JSON.stringify(todos));
+  }
+
+const addTodo= (title, desc)=>{
+  console.log("task added", title, desc)
+let sno;
+if(todos.length==0){
+  sno=0;
+}
+else{
+  sno=todos[todos.length-1].sno + 1;
+}
+
+ 
+  const myTodo={
+    sno:sno,
+    title:title,
+    desc:desc
+
+  }
+  setTodos([...todos,myTodo]);
+  console.log(myTodo)
+  
+   
+}
+
+  const [todos, setTodos] = useState(initTodo);
+  
+  useEffect(() => {
+    localStorage.setItem("todos", JSON.stringify(todos));
+  
+    
+  }, [todos])
+  return (
+    <>
+
+      
+      <Navbar title="My ToDos List" searchBar={false}/>
+      <AddToDo addTodo={addTodo}/>
+      <ToDos todos={todos} onDelete={onDelete}/>
+      <Footer/>
+      
+      
+    </>
+  )
+}
+
+export default App
