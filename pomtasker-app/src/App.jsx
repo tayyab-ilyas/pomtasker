@@ -63,7 +63,7 @@ else{
     <>
 
       
-      <Navbar title="Pomolist." searchBar={false}/>
+      <Navbar title="PomTasker." searchBar={false}/>
       <PomodoroTimer/>
       <AddToDo addTodo={addTodo}/>
       <ToDos todos={todos} onDelete={onDelete}/>
