@@ -25,7 +25,7 @@ As the maintainer of this project, I am committed to fostering an inclusive and 
 
 ## Reporting and Enforcement
 
-- If you experience or witness any behavior that violates this code of conduct, please contact me directly at [your-email@example.com]. Your report will be taken seriously and handled confidentially.
+- If you experience or witness any behavior that violates this code of conduct, please contact me directly at [tayyabilyas963@gmail.com]. Your report will be taken seriously and handled confidentially.
 - I reserve the right to take appropriate actions, including warnings, temporary or permanent bans, and removing contributions or comments, to enforce this code of conduct.
 
 By participating in this project, you agree to follow this code of conduct and contribute to creating a positive and inclusive environment.
